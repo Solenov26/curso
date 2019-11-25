@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "c7f52b1d-898f-43ab-ac7e-f8001ca30e5c",
+		"name": "Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta Estados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/consultaEstados",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"consultaEstados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta  Municipios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"estado_id\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/consultaMunicipios",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"consultaMunicipios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Alta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\":\"Prueba 3\",\n\t\"apellido_paterno\":\"test\",\n\t\"apellido_materno\":\"test\",\n\t\"email\":\"asd@asd.com\",\n\t\"telefono\":\"1234567890\",\n\t\"municipio_id\":2464,\n\t\"colonia\":\"n/a\",\n\t\"calle\":\"n/a\",\n\t\"numero\":\"n/a\",\n\t\"numero_interior\":\"n/a\",\n\t\"codigo_postal\":0,\n\t\"estado_id\":33,\n\t\"usuario_id\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/alta",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clientes Consulta todos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cliente_id\": null,\n  \"usuario_id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/consultaAll",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"consultaAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clientes Consulta por id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cliente_id\": 204,\n  \"usuario_id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/consultaAll",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"consultaAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Actualiza",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"disabled": false
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\":\"Prueba 1\",\n\t\"apellido_paterno\":\"Ad\",\n\t\"apellido_materno\":\"Ed\",\n\t\"email\":\"asdas@asd.com\",\n\t\"telefono\":\"2314324\",\n\t\"usuario_id\":3,\n\t\"municipio_id\":\"2464\",\n\t\"colonia\":\"Fer\",\n\t\"calle\":\"CAMBIE\",\n\t\"numero\":\"123\",\n\t\"numero_interior\":\"234\",\n\t\"codigo_postal\":21342,\n\t\"estado_id\":\"30\",\n\t\"direccion_id\":15,\n\t\"cliente_id\":15\n\t\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/actualizaId",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"actualizaId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clientes Eliminar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cliente_id\": 207,\n  \"usuario_id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/cliente/eliminarId",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"cliente",
+						"eliminarId"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "e659504a-7a31-4c91-ae4f-0470efce69b9",
+		"name": "Login e Insumos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"pruebatest@gmail.com\",\n  \"contrasenia\": \"1234567\"\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/seguridad/login",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"seguridad",
+						"login"
+					]
+				},
+				"description": "Verficar login"
+			},
+			"response": []
+		},
+		{
+			"name": "Registro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"pruebatest@gmail.com\",\n  \"contrasenia\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/seguridad/registro",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"seguridad",
+						"registro"
+					]
+				},
+				"description": "Revisar registro"
+			},
+			"response": []
+		},
+		{
+			"name": "Insumo Alta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Azúcar\",\n  \"contenido_neto\": 500,\n  \"unidad_medida\": \"Gramos ( gr )\",\n  \"costo_empaque\": 50,\n  \"usuario_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/insumos/alta",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"insumos",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insumos Consulta Todos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"usuario_id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/insumos/consultaAll",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"insumos",
+						"consultaAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insumos Consulta por id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"usuario_id\": 3,\n \"insumo_id\": 193\n}"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/insumos/consultaId",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"insumos",
+						"consultaId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insumo Actualiza",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"insumo_id\": 2,\n  \"nombre\": \"Harina\",\n  \"contenido_neto\": 1.36,\n  \"unidad_medida\": \"Kilogramo ( kg )\",\n  \"costo_empaque\": 124.5,\n  \"usuario_id\": 1\n}\n"
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/insumos/actualizaId",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"insumos",
+						"actualizaId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insumo Eliminar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"insumo_id\":196,\n\t\"usuario_id\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://201.131.20.74:8080/workingmons-ws/insumos/eliminaId",
+					"protocol": "http",
+					"host": [
+						"201",
+						"131",
+						"20",
+						"74"
+					],
+					"port": "8080",
+					"path": [
+						"workingmons-ws",
+						"insumos",
+						"eliminaId"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
